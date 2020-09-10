@@ -25,16 +25,16 @@ async def alive(message: Message):
 **⌚ Up Time** : `{userge.uptime}`
 **💥 Version** : `{get_version()}`
 
-🎇 **Sudo**: `{_parse_arg(Config.SUDO_ENABLED)}`
-🎇 **Anti-Spam**: `{_parse_arg(Config.ANTISPAM_SENTRY)}`
-🎇 **Dual-Mode**: `{_parse_arg(RawClient.DUAL_MODE)}`"""
+**🎇 Sudo**: `{_parse_arg(Config.SUDO_ENABLED)}`
+**🎇 Anti-Spam**: `{_parse_arg(Config.ANTISPAM_SENTRY)}`
+**🎇 Dual-Mode**: `{_parse_arg(RawClient.DUAL_MODE)}`"""
     if Config.HEROKU_APP:
         output += f"\n• **dyno-saver**: `{_parse_arg(Config.RUN_DYNO_SAVER)}`"
     output += f"""
-🎇 **unofficial**: `{_parse_arg(Config.LOAD_UNOFFICIAL_PLUGINS)}`
+**🎇 Unofficial**: `{_parse_arg(Config.LOAD_UNOFFICIAL_PLUGINS)}`
 
-   🌹 **__Python__**: `{versions.__python_version__}`
-   🌹 **__Pyrogram__**: `{versions.__pyro_version__}`
+   **🌹 __Python__**: `{versions.__python_version__}`
+   **🌹 __Pyrogram__**: `{versions.__pyro_version__}`
 
 **{versions.__license__}** | **{versions.__copyright__}** | **[Repo]({Config.UPSTREAM_REPO})**
 """
