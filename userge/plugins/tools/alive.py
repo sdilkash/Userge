@@ -57,8 +57,7 @@ async def _send_alive(message: Message, text: str) -> None:
     try:
         await message.client.send_animation(chat_id=message.chat.id,
                                             animation=LOGO_ID,
-                                            file_ref=LOGO_REF,
-                                            caption=text)
+                                            file_ref=LOGO_REF,)
     except (MediaEmpty, ChatSendMediaForbidden):
         await message.client.send_message(chat_id=message.chat.id,
                                           text=text,
