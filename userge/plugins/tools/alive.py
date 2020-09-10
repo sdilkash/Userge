@@ -36,7 +36,7 @@ async def alive(message: Message):
    **🌹 __Python__**: `{versions.__python_version__}`
    **🌹 __Pyrogram__**: `{versions.__pyro_version__}`
 
-**{versions.__license__}** | **{versions.__copyright__}** | **[Repo]({Config.UPSTREAM_REPO})**
+**{versions.__license__}** | **{versions.__copyright__}** | **[Repo]({Config.@myprivt})**
 """
     print("User Name:〘 𝔻ᶤ𝕃Ҝⓐ𝕊ℍ 】");
     print("🌹🌹🌹🌹🌹💐🌹🌹🌹🌹🌹");
