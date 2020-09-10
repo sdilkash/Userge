@@ -31,7 +31,7 @@ async def alive(message: Message):
     if Config.HEROKU_APP:
         output += f"\n• **dyno-saver**: `{_parse_arg(Config.RUN_DYNO_SAVER)}`"
     output += f"""
- • **unofficial**: `{_parse_arg(Config.LOAD_UNOFFICIAL_PLUGINS)}`
+• **unofficial**: `{_parse_arg(Config.LOAD_UNOFFICIAL_PLUGINS)}`
 
     **__python__**: `{versions.__python_version__}`
     **__pyrogram__**: `{versions.__pyro_version__}`
