@@ -21,6 +21,7 @@ LOGO_ID, LOGO_REF = None, None
 async def alive(message: Message):
     await message.delete()
     output = f"""
+    print("⫷𝓘'𝓶  𝓪𝓵𝓲𝓿𝓮  𝓱𝓮𝓻𝓮  𝓓𝓘𝓛𝓚𝓐𝓢𝓗⫸");
 **⌚ Up Time** : `{userge.uptime}`
 **💥 Version** : `{get_version()}`
 
@@ -37,6 +38,7 @@ async def alive(message: Message):
 
 **{versions.__license__}** | **{versions.__copyright__}** | **[Repo]({Config.UPSTREAM_REPO})**
 """
+    print("User Name:〘 𝔻ᶤ𝕃Ҝⓐ𝕊ℍ 】");
     print("🌹🌹🌹🌹🌹💐🌹🌹🌹🌹🌹");
     try:
         await _send_alive(message, output)
@@ -66,7 +68,7 @@ async def _send_alive(message: Message, text: str) -> None:
 async def _refresh_id():
     global LOGO_ID, LOGO_REF  # pylint: disable=global-statement
     try:
-        gif = (await userge.get_messages('geAgADDgEAAsDn0FY', 260526)).animation
+        gif = (await userge.get_messages('-1001260319807', 549042)).animation
     except ChannelInvalid:
         LOGO_ID = None
         LOGO_REF = None
