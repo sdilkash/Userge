@@ -21,25 +21,23 @@ LOGO_ID, LOGO_REF = None, None
 async def alive(message: Message):
     await message.delete()
     output = f"""
-    print("⫷𝓘'𝓶  𝓪𝓵𝓲𝓿𝓮  𝓱𝓮𝓻𝓮  𝓓𝓘𝓛𝓚𝓐𝓢𝓗⫸");
+    
 **⌚ Up Time** : `{userge.uptime}`
 **💥 Version** : `{get_version()}`
 
-**🎇 Sudo**: `{_parse_arg(Config.SUDO_ENABLED)}`
-**🎇 Anti-Spam**: `{_parse_arg(Config.ANTISPAM_SENTRY)}`
-**🎇 Dual-Mode**: `{_parse_arg(RawClient.DUAL_MODE)}`"""
+** sudo**: `{_parse_arg(Config.SUDO_ENABLED)}`
+** anti-spam**: `{_parse_arg(Config.ANTISPAM_SENTRY)}`
+** dual-mode**: `{_parse_arg(RawClient.DUAL_MODE)}`"""
     if Config.HEROKU_APP:
         output += f"\n• **dyno-saver**: `{_parse_arg(Config.RUN_DYNO_SAVER)}`"
     output += f"""
-**🎇 Unofficial**: `{_parse_arg(Config.LOAD_UNOFFICIAL_PLUGINS)}`
+** unofficial**: `{_parse_arg(Config.LOAD_UNOFFICIAL_PLUGINS)}`
 
-   **🌹 __Python__**: `{versions.__python_version__}`
-   **🌹 __Pyrogram__**: `{versions.__pyro_version__}`
+   ** __python__**: `{versions.__python_version__}`
+   ** __pyrogram__**: `{versions.__pyro_version__}`
 
 **{versions.__license__}** | **{versions.__copyright__}** | **[Repo]({Config.UPSTREAM_REPO})**
 """
-    print("User Name:〘 𝔻ᶤ𝕃Ҝⓐ𝕊ℍ 】");
-    print("🌹🌹🌹🌹🌹💐🌹🌹🌹🌹🌹");
     try:
         await _send_alive(message, output)
     except (FileIdInvalid, FileReferenceEmpty, BadRequest):
@@ -68,7 +66,7 @@ async def _send_alive(message: Message, text: str) -> None:
 async def _refresh_id():
     global LOGO_ID, LOGO_REF  # pylint: disable=global-statement
     try:
-        gif = (await userge.get_messages('-1001260319807', 394429)).animation
+        gif = (await userge.get_messages('theUserge', 31)).animation
     except ChannelInvalid:
         LOGO_ID = None
         LOGO_REF = None
